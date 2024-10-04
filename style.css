@@ -12,7 +12,7 @@ body{
     width:100%;
     height: 100%;
     min-height: 100vh;
-    background: #222;
+    background: #004157;
 }
 .wrapper{
     width:1280px;
@@ -130,7 +130,7 @@ nav .navlinks li a{
 .btn-group .btn{
     border-color: #d5d5d5;
     color:#fff;
-    background-color: #333;
+    background-color: #116c7c;
     padding: 12px 25px;
     margin: 5px 0px;
     margin-right:7px;
@@ -154,54 +154,117 @@ nav .navlinks li a{
 /* Respnosiv design & displaying navbar for small screen */
 @media(max-width:930px)
 {
-    nav .togglebtn{
-        display: initial;
-    }
-    /* for toggle button**/
-    .click {
-        top:45px;
-    }
-    .click span{
-        position: absolute;
-        margin-top:12px
-    }
-    .click span:first-child{
-        transform: rotate(-40deg);
-    }
-    .click span:nth-child(2)
-    {
-        opacity: 0;
-        margin:0;
-    }
-    .click span:last-child{
-        transform: rotate(45deg);
-        top:0;
-    }
-    nav .navlinks{
-        position: absolute;
-        top:110px;
-        right:-100%;
-        bottom: 0;
-        width: 60%;
-        height: 100vh;
-        background-color: #222;
-        z-index: 3;
-        box-shadow: 5px 13px 30px rgba(0,0,0,0.1);
-        transition: 0.5s;
-        padding: 25px 0px;
-    }
-    nav .navlinks li{
-        display: block;
-    }
-    nav .navlinks li a{
-        display: block;
-        margin-bottom: 15px;
-        text-align: center;
-    }
-    nav .navlinks.open{
-        right:0;
-    }
+nav .togglebtn{
+    display: initial;
 }
+/* for toggle button**/
+.click {
+    top:45px;
+}
+.click span{
+    position: absolute;
+    margin-top:12px
+}
+.click span:first-child{
+    transform: rotate(-40deg);
+}
+.click span:nth-child(2)
+{
+    opacity: 0;
+    margin:0;
+}
+.click span:last-child{
+    transform: rotate(45deg);
+    top:0;
+}
+nav .navlinks{
+    position: absolute;
+    top:110px;
+    right:-100%;
+    bottom: 0;
+    width: 60%;
+    height: 100vh;
+    background-color: #222;
+    z-index: 3;
+    box-shadow: 5px 13px 30px rgba(0,0,0,0.1);
+    transition: 0.5s;
+    padding: 25px 0px;
+}
+nav .navlinks li{
+    display: block;
+}
+nav .navlinks li a{
+    display: block;
+    margin-bottom: 15px;
+    text-align: center;
+}
+nav .navlinks.open{
+    right:0;
+}
+}
+
+.company-logo {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%; /* opsional jika ingin logo berbentuk lingkaran */
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.projects {
+    background: #222; /* Sama dengan background section profile */
+    color: #e5e5e5; /* Warna teks */
+    padding: 60px 0; /* Padding atas dan bawah */
+}
+
+.projects h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Spasi antar proyek */
+}
+
+.project-item {
+    background: #333; /* Latar belakang item proyek */
+    border-radius: 8px;
+    overflow: hidden;
+    width: calc(25% - 20px); /* Ubah menjadi 4 item per baris */
+    min-width: 200px; /* Ukuran minimum */
+    max-width: 300px; /* Ukuran maksimum */
+    transition: transform 0.3s;
+}
+
+.project-item:hover {
+    transform: scale(1.05); /* Efek zoom saat hover */
+}
+
+.project-item img {
+    width: 100%; /* Gambar responsif */
+    height: auto; /* Tinggi otomatis */
+    max-height: 200px; /* Batasi tinggi maksimum gambar */
+    object-fit: cover; /* Memastikan gambar terpotong dengan baik */
+}
+
+
+.project-item h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.project-item p {
+    padding: 0 10px;
+    text-align: center;
+}
+
+
+
 @media(max-width:768px)
 {
     .container{
@@ -211,4 +274,38 @@ nav .navlinks li a{
     .hero-text{
         padding:40px 0px;
     }
+}
+
+.mission {
+    background: #222; /* Sama dengan background section profile */
+    color: #e5e5e5; /* Warna teks */
+    padding: 60px 0; /* Padding atas dan bawah */
+}
+
+.mission h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.mission-content {
+    display: flex;
+    flex-direction: column; /* Vertikal untuk tampilan di perangkat kecil */
+    align-items: center;
+    text-align: center; /* Rata tengah untuk teks */
+}
+
+.mission-logo {
+    margin-bottom: 20px; /* Spasi antara logo dan deskripsi */
+}
+
+.mission-logo img {
+    width: 150px; /* Ukuran logo perusahaan */
+    height: auto; /* Tinggi otomatis */
+}
+
+.mission-description p {
+    max-width: 600px; /* Lebar maksimum deskripsi */
+    padding: 0 10px; /* Padding horizontal */
+    margin-bottom: 20px; /* Spasi antar paragraf */
 }
